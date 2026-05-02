@@ -1,0 +1,33 @@
+<Application x:Class="VinayakEnterprises.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:VinayakEnterprises.App"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:viewmodels="clr-namespace:VinayakEnterprises.Core.ViewModels;assembly=VinayakEnterprises.Core"
+             xmlns:authViewModels="clr-namespace:VinayakEnterprises.Core.ViewModels.Auth;assembly=VinayakEnterprises.Core"
+             xmlns:views="clr-namespace:VinayakEnterprises.App.Views.Dashboard"
+             xmlns:authViews="clr-namespace:VinayakEnterprises.App.Views.Auth"
+             xmlns:converters="clr-namespace:VinayakEnterprises.App.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepOrange" SecondaryColor="Indigo" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesign3.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+            <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+            <converters:RoleToVisibilityConverter x:Key="RoleToVisibilityConverter" />
+
+            <DataTemplate DataType="{x:Type authViewModels:LoginViewModel}">
+                <authViews:LoginView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type authViewModels:ChangePasswordViewModel}">
+                <authViews:ChangePasswordView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:DashboardViewModel}">
+                <views:DashboardView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

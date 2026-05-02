@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <!-- Shared settings for all projects in the solution -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <RootNamespace>VinayakEnterprises</RootNamespace>
+    <Authors>VinayakEnterprises</Authors>
+    <Company>VinayakEnterprises</Company>
+    <Copyright>Copyright © VinayakEnterprises</Copyright>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <!-- Windows-specific TFM for WPF / WinForms projects is set per-project.
+       Class libraries use net8.0 so they can be tested on any OS if needed. -->
+</Project>

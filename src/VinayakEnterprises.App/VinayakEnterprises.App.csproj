@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\VinayakEnterprises.Core\VinayakEnterprises.Core.csproj" />
+    <ProjectReference Include="..\VinayakEnterprises.Data\VinayakEnterprises.Data.csproj" />
+    <ProjectReference Include="..\VinayakEnterprises.Hardware\VinayakEnterprises.Hardware.csproj" />
+    <ProjectReference Include="..\VinayakEnterprises.Imaging\VinayakEnterprises.Imaging.csproj" />
+    <ProjectReference Include="..\VinayakEnterprises.Reports\VinayakEnterprises.Reports.csproj" />
+    <ProjectReference Include="..\VinayakEnterprises.Notifications\VinayakEnterprises.Notifications.csproj" />
+    <ProjectReference Include="..\VinayakEnterprises.Licensing\VinayakEnterprises.Licensing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="MaterialDesignColors" Version="5.3.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="5.3.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- Self-contained single-exe publish settings -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- appsettings.json — copy to output on every build -->
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <!-- tessdata — copy eng+hin language packs to output -->
+    <None Include="..\VinayakEnterprises.Imaging\tessdata\**\*">
+      <Link>tessdata\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Pinned to match the version pulled transitively by Microsoft.Extensions.Hosting -->
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.7" />
+  </ItemGroup>
+
+</Project>

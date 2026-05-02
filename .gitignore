@@ -1,0 +1,28 @@
+## .NET / Visual Studio
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.DotSettings.user
+
+## Publish output
+publish/
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Sensitive — NEVER commit
+# tessdata binaries are large; add to git LFS or download separately
+src/VinayakEnterprises.Imaging/tessdata/*.traineddata
+
+# License secret / keygen tool output
+tools/VinayakEnterprises.KeygenTool/bin/
+tools/VinayakEnterprises.KeygenTool/obj/

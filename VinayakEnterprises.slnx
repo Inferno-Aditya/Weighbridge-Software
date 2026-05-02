@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VinayakEnterprises.App/VinayakEnterprises.App.csproj" />
+    <Project Path="src/VinayakEnterprises.Core/VinayakEnterprises.Core.csproj" />
+    <Project Path="src/VinayakEnterprises.Data/VinayakEnterprises.Data.csproj" />
+    <Project Path="src/VinayakEnterprises.Hardware/VinayakEnterprises.Hardware.csproj" />
+    <Project Path="src/VinayakEnterprises.Imaging/VinayakEnterprises.Imaging.csproj" />
+    <Project Path="src/VinayakEnterprises.Licensing/VinayakEnterprises.Licensing.csproj" />
+    <Project Path="src/VinayakEnterprises.Notifications/VinayakEnterprises.Notifications.csproj" />
+    <Project Path="src/VinayakEnterprises.Reports/VinayakEnterprises.Reports.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/VinayakEnterprises.KeygenTool/VinayakEnterprises.KeygenTool.csproj" />
+  </Folder>
+</Solution>
